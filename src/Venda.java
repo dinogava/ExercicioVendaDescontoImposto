@@ -29,8 +29,8 @@ public class Venda {
 
 
     }
-    public BigDecimal getValorImposto(){
-        BigDecimal impostoNota = BigDecimal.ZERO;
+    public BigDecimal getValorImposto(BigDecimal impostoNota){
+
         impostoNota = impostoNota.add(getTotalNota());
 
         return impostoNota.subtract(impostoNota.multiply(imposto.getAliquota().divide(new BigDecimal("100.00"))));
